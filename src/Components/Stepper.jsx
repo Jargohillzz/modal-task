@@ -76,7 +76,7 @@ const Stepper = () => {
                 className={`dot ${count > id && "tick"}`}
                 onClick={() => goToStep(id)}
               ></div>
-              <p className="fts-xs-6 fts-sm-3">{step}</p>
+              <p className="fts-6 fts-sm-3">{step}</p>
             </div>
           );
         })}

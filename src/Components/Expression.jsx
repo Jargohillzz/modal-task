@@ -44,7 +44,7 @@ const Expression = ({ nextCount }) => {
                 <div className="rule-logo">
                   <img ref={imgRef} src={image} alt="rules" />
                 </div>
-                <h6 className="fts-xs-6 fts-md-3 m-0 text-primary">{name}</h6>
+                <h6 className="fts-6 fts-md-3 m-0 text-primary">{name}</h6>
               </div>
               <button className="border-0">
                 <img src={infoSVG} alt="info" />
