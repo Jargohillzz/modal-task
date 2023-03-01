@@ -1,14 +1,14 @@
 import "./App.css";
 
-import "bootstrap/dist/js/bootstrap.min.js";
-import "bootstrap/dist/css/bootstrap.min.css";
-
 import Background from "./Components/Background";
+import RulesContext from "./contexts/RulesContext";
 
 function App() {
   return (
     <div className="App">
-      <Background />
+      <RulesContext>
+        <Background />
+      </RulesContext>
     </div>
   );
 }

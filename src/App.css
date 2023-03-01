@@ -10,8 +10,8 @@
 .background {
   background-image: linear-gradient(
     to bottom,
-    #04370e 0%,
-    #04370e 40%,
+    #272727 0%,
+    #272727 43%,
     #fff 40%
   );
   height: 100vh;
@@ -25,10 +25,19 @@
   max-width: 700px !important;
 }
 .wallet {
-  width: 160px;
+  width: 180px;
   border-radius: 5px;
   height: 35px;
   background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wallet-img {
+  width: 20px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: #1dc9d4;
 }
 .content-container {
   width: 90%;
@@ -92,14 +101,56 @@
   border-radius: 6px;
   width: 48%;
 }
-.rule .rule-logo {
+.rule-logo {
   width: 20px;
 }
-.rule .rule-logo img {
+.rule-logo img {
   width: 100%;
 }
+.define-input {
+  border: none;
+  outline: none;
+  margin: 0;
+}
+.define-input:focus {
+  border-bottom: 1px solid #222;
+}
+
+.search-container {
+  background-color: #fbfbfc;
+  padding: 30px;
+  border: 1px solid #e3e6e8;
+  margin-top: 20px;
+}
+
+.define-search {
+  background-color: #fff;
+  width: 100%;
+  border: 1px solid #1dc9d4;
+  border-radius: 6px;
+  height: 40px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.define-search > i {
+  font-size: 18px;
+}
+.define-search > input {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+}
+.define-search:has(input:focus) {
+  box-shadow: 0 0 0 2px rgba(29, 201, 212, 0.5);
+}
+
 @media only screen and (min-width: 768px) {
   .create-text {
     width: 60%;
+  }
+  .create-btn {
+    padding: 10px 20px !important;
   }
 }

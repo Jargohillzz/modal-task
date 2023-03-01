@@ -1,0 +1,28 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+
+$utilities: (
+  "t-color": (
+    property: color,
+    class: color,
+    values: (
+      "white": #fff,
+      "blue": #0f2830,
+      "black": #272727,
+      "green": #2ee297,
+    ),
+  ),
+  "bg-color": (
+    property: background-color,
+    class: bg,
+    values: (
+      "black": #272727,
+      "blue": #0f2830,
+      "white": #fff,
+      "light": #fbfbfc,
+      "green": #2ee297,
+    ),
+  ),
+);
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";

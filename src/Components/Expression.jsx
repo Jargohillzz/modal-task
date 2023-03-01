@@ -1,35 +1,32 @@
-import React from "react";
+import React, { useContext, useRef } from "react";
 
-import complementSVG from "../assets/complement.svg";
-import differenceSVG from "../assets/difference.svg";
-import intersectionSVG from "../assets/intersection.svg";
-import unionSVG from "../assets/union.svg";
 import infoSVG from "../assets/Vector.svg";
-
-const rulesList = [
-  {
-    id: 1,
-    image: unionSVG,
-    name: "Union",
-  },
-  {
-    id: 2,
-    image: intersectionSVG,
-    name: "Intersection",
-  },
-  {
-    id: 3,
-    image: complementSVG,
-    name: "Complement",
-  },
-  {
-    id: 4,
-    image: differenceSVG,
-    name: "Difference",
-  },
-];
+import { rulesContext } from "../contexts/RulesContext";
+import { rulesList } from "./Stepper";
 
 const Expression = ({ nextCount }) => {
+  const imgRef = useRef();
+  const { setCurrId, currId, setCount } = useContext(rulesContext);
+  const defineLogo = (id) => {
+    console.log(imgRef.current.src);
+    console.log(rulesList);
+    let currRule = 0;
+    rulesList.filter((rule) => {
+      if (rule.id === id) {
+        currRule = rule.id;
+      }
+    });
+    currRule && setCurrId(currRule);
+    console.log(currId);
+    setCount((prev) => {
+      if (prev == 3) {
+        return prev;
+      } else {
+        return prev + 1;
+      }
+    });
+  };
+
   return (
     <div>
       <h2>Which Type of Rule do you want to create?</h2>
@@ -40,12 +37,12 @@ const Expression = ({ nextCount }) => {
             <div
               key={id}
               className="rule d-flex mb-2 align-items-center justify-content-between p-1"
-              onClick={nextCount}
+              onClick={() => defineLogo(id)}
               role="button"
             >
               <div className="rule-name d-flex align-items-center gap-2">
                 <div className="rule-logo">
-                  <img src={image} alt="rules" />
+                  <img ref={imgRef} src={image} alt="rules" />
                 </div>
                 <h6 className="fs-6 m-0 text-primary">{name}</h6>
               </div>

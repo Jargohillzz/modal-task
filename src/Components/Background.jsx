@@ -14,7 +14,9 @@ const Background = () => {
             <h2>keyring</h2>
           </div>
           <div className="wallet d-flex p-2 text-dark">
-            <p className="fs-6">0x345...rd3</p>
+            <p className="fs-6 p-0 m-0 pe-2">0x345...rd3</p>
+            <i class="fa-solid fa-chevron-down"></i>
+            <div className="wallet-img"></div>
           </div>
         </div>
         <div className="create-rule mt-3 d-md-flex justify-content-md-between align-items-md-center">
@@ -22,7 +24,10 @@ const Background = () => {
             Underlying page from which the user clicks "Create Rule", which
             opens up the modal/wizard.
           </h4>
-          <Button variant="success" onClick={handleShow}>
+          <Button
+            className="create-btn fw-bold bg-green color-black "
+            onClick={handleShow}
+          >
             Create Rule
           </Button>
         </div>
