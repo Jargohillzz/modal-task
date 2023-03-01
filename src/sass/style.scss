@@ -23,6 +23,20 @@ $utilities: (
       "green": #2ee297,
     ),
   ),
+  "f-size": (
+    property: font-size,
+    class: fts,
+    responsive: true,
+    values: (
+      "1": 40px,
+      "2": 32px,
+      "3": 16px,
+      "4": 14px,
+      "5": 12px,
+      "6": 10px,
+      "7": 8px,
+    ),
+  ),
 );
 
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
