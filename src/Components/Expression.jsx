@@ -29,7 +29,9 @@ const Expression = ({ nextCount }) => {
 
   return (
     <div>
-      <h2>Which Type of Rule do you want to create?</h2>
+      <h2 className="fts-3 fts-md-2">
+        Which Type of Rule do you want to create?
+      </h2>
       <div className="choose-rule d-flex flex-wrap w-100">
         {rulesList.map((rule) => {
           const { id, image, name } = rule;
@@ -44,7 +46,7 @@ const Expression = ({ nextCount }) => {
                 <div className="rule-logo">
                   <img ref={imgRef} src={image} alt="rules" />
                 </div>
-                <h6 className="fts-6 fts-md-3 m-0 text-primary">{name}</h6>
+                <h6 className="fts-7 fts-md-3 m-0 text-primary">{name}</h6>
               </div>
               <button className="border-0">
                 <img src={infoSVG} alt="info" />
